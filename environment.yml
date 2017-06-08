@@ -1,0 +1,16 @@
+name: flask3env
+channels:
+- defaults
+dependencies:
+- click=6.7=py35_0
+- flask=0.12.2=py35_0
+- itsdangerous=0.24=py35_0
+- jinja2=2.9.6=py35_0
+- markupsafe=0.23=py35_2
+- pip=9.0.1=py35_1
+- python=3.5.3=3
+- setuptools=27.2.0=py35_1
+- vs2015_runtime=14.0.25123=0
+- werkzeug=0.12.2=py35_0
+- wheel=0.29.0=py35_0
+prefix: C:\Users\Polyun\Anaconda3\envs\flask3env
