@@ -11,13 +11,13 @@ services:
      - "443:443"
   frontend:
     restart: always
-    build: ./frontend
+    build: ./front
     ports:
      - "3000:3000"
      - "3001:3001"
      - "8080:8080"
     volumes:
-     - ./frontend:/tmp/cache
+     - ./front:/tmp/cache
   db:
     restart: always
     hostname: mysqlserver
