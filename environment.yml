@@ -10,7 +10,6 @@ dependencies:
 - wheel=0.29.0=py27_0
 - pip:
   - asn1crypto==0.22.0
-  - cffi==1.10.0
   - click==6.7
   - cryptography==1.9
   - enum34==1.1.6
