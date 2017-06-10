@@ -1,12 +1,17 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify, session, flash
-from flask_sqlalchemy import SQLAlchemy
+import flask_sqlalchemy
+import flask
+import os
+import jinja2
+
+template_dir = os.path.join(os.path.dirname(__file__), "templates")
+jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
 
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:my-secret-pw@192.168.0.88:3306/test_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db = SQLAlchemy(app)
+db = flask_sqlalchemy.SQLAlchemy(app)
 
 class UsersPy(db.Model):
 
@@ -26,8 +31,6 @@ class UsersPy(db.Model):
 db.init_app(app)
 
 db.create_all()
-
-HTML="""<h1>Der Patrick ist geil. Shane ist aber MEGA Geil.</h1><p>Yippi</p><p>Connected?</p>kokoklkl"""
 
 
 @app.route('/test_entry_db/')
@@ -50,7 +53,7 @@ def test_entry_db():
            'password': result.password}
       json_results.append(d)
 
-    return jsonify(items=json_results)
+    return flask.jsonify(items=json_results)
 
 @app.route('/testdb')
 def testdb():
@@ -64,8 +67,9 @@ def testdb():
 
 @app.route('/')
 def hello_world():
-    return HTML
-
+    template = jinja_env.get_template("index.html")
+    params={}
+    return template.render(params)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=80)
