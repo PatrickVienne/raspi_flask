@@ -3,9 +3,10 @@ version: '2'
 services:
   web:
     restart: always
-    #dockerfile: Dockerfile3
-    #dockerfile: Dockerfile
-    build: ./web
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    image: webservice_flask
     depends_on:
       - db
     ports:
