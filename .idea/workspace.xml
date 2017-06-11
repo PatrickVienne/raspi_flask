@@ -2,9 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beaa6aac-91bc-439f-ba59-5defd6c99a66" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose.yml" afterPath="$PROJECT_DIR$/docker-compose.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose3.yml" afterPath="$PROJECT_DIR$/docker-compose3.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Dockerfile3" afterPath="$PROJECT_DIR$/web/Dockerfile3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Dockerfile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/Dockerfile" afterPath="$PROJECT_DIR$/front/Dockerfile" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/.editorconfig" afterPath="$PROJECT_DIR$/front/.editorconfig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/.gitignore" afterPath="$PROJECT_DIR$/front/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/.travis.yml" afterPath="$PROJECT_DIR$/front/.travis.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/CHANGELOG.md" afterPath="$PROJECT_DIR$/front/CHANGELOG.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/LICENSE" afterPath="$PROJECT_DIR$/front/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/README.md" afterPath="$PROJECT_DIR$/front/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/bs-config.e2e.json" afterPath="$PROJECT_DIR$/front/bs-config.e2e.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/bs-config.json" afterPath="$PROJECT_DIR$/front/bs-config.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/e2e/app.e2e-spec.ts" afterPath="$PROJECT_DIR$/front/e2e/app.e2e-spec.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/e2e/tsconfig.json" afterPath="$PROJECT_DIR$/front/e2e/tsconfig.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/karma-test-shim.js" afterPath="$PROJECT_DIR$/front/karma-test-shim.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/karma.conf.js" afterPath="$PROJECT_DIR$/front/karma.conf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/non-essential-files.osx.txt" afterPath="$PROJECT_DIR$/front/non-essential-files.osx.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/non-essential-files.txt" afterPath="$PROJECT_DIR$/front/non-essential-files.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/package.json" afterPath="$PROJECT_DIR$/front/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/protractor.config.js" afterPath="$PROJECT_DIR$/front/protractor.config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/app/app.component.spec.ts" afterPath="$PROJECT_DIR$/front/src/app/app.component.spec.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/app/app.component.ts" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/app/app.module.ts" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/favicon.ico" afterPath="$PROJECT_DIR$/front/src/favicon.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/index.html" afterPath="$PROJECT_DIR$/front/src/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/main.ts" afterPath="$PROJECT_DIR$/front/src/main.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/styles.css" afterPath="$PROJECT_DIR$/front/src/styles.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/systemjs-angular-loader.js" afterPath="$PROJECT_DIR$/front/src/systemjs-angular-loader.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/systemjs.config.extras.js" afterPath="$PROJECT_DIR$/front/src/systemjs.config.extras.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/systemjs.config.js" afterPath="$PROJECT_DIR$/front/src/systemjs.config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/src/tsconfig.json" afterPath="$PROJECT_DIR$/front/src/tsconfig.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/front/quickstart/tslint.json" afterPath="$PROJECT_DIR$/front/tslint.json" />
     </list>
     <ignored path="raspi_flask.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,16 +64,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Dockerfile3" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Dockerfile3">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,21 +74,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/Dockerfile">
+      <file leaf-file-name="Dockerfile2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Dockerfile2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/front/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -150,10 +178,10 @@
         <option value="$PROJECT_DIR$/environment3.yml" />
         <option value="$PROJECT_DIR$/ReadMe.md" />
         <option value="$PROJECT_DIR$/web/Dockerfile" />
-        <option value="$PROJECT_DIR$/front/Dockerfile" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/docker-compose3.yml" />
         <option value="$PROJECT_DIR$/web/Dockerfile3" />
+        <option value="$PROJECT_DIR$/front/Dockerfile" />
       </list>
     </option>
   </component>
@@ -265,8 +293,8 @@
       <recent name="D:\raspi_flask\data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\raspi_flask" />
       <recent name="D:\raspi_flask\web" />
+      <recent name="D:\raspi_flask" />
       <recent name="D:\raspi_flask\data" />
     </key>
   </component>
@@ -483,14 +511,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/requirements3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -851,14 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -883,10 +895,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/Dockerfile2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
           <folding />
         </state>
       </provider>

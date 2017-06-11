@@ -1,51 +1,9 @@
-FROM resin/rpi-raspbian:latest
-RUN apt-get update && \
-	apt-get install -y --no-install-recommends \
+FROM resin/rpi-raspbian:jessie
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     wget \
-    bzr \
-    git \
-    mercurial \
-    openssh-client \
-    subversion \
-    procps \
-    autoconf \
-    automake \
-    bzip2 \
-    file \
-    g++ \
-    gcc \
-    imagemagick \
-    libbz2-dev \
-    libc6-dev \
-    libcurl4-openssl-dev \
-    libevent-dev \
-    libffi-dev \
-    libgeoip-dev \
-    libglib2.0-dev \
-    libjpeg-dev \
-    liblzma-dev \
-    libmagickcore-dev \
-    libmagickwand-dev \
-    libmysqlclient-dev \
-    libncurses-dev \
-    libpng-dev \
-    libpq-dev \
-    libreadline-dev \
-    libsqlite3-dev \
-    libssl-dev \
-    libtool \
-    libwebp-dev \
-    libxml2-dev \
-    libxslt-dev \
-    libyaml-dev \
-    make \
-    nano \
-    nginx \
-    patch \
-    xz-utils \
-    zlib1g-dev \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get clean
 
@@ -62,7 +20,7 @@ RUN set -ex \
     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
     56730D5401028683275BD23C23EFEFE93C4CFFFE \
   ; do \
-    gpg --keyserver pgp.mit.edu --recv-keys "$key"; \
+    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
   done
 
 ENV NPM_CONFIG_LOGLEVEL info
@@ -81,7 +39,7 @@ RUN set -ex \
   && for key in \
     6A010C5166006599AA17F08146C2130DFD2497F5 \
   ; do \
-    gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
+    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" || \
     gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
     gpg --keyserver keyserver.pgp.com --recv-keys "$key" ; \
   done \
@@ -92,7 +50,6 @@ RUN set -ex \
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn
 
-WORKDIR quickstart
 RUN npm install
 EXPOSE 3000 3001 8080
-CMD npm start
+CMD ["npm", "start"]
