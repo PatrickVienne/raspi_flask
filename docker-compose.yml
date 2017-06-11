@@ -3,6 +3,8 @@ version: '2'
 services:
   web:
     restart: always
+    #dockerfile: Dockerfile3
+    dockerfile: Dockerfile
     build: ./web
     depends_on:
       - db

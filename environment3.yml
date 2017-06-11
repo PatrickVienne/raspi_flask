@@ -1,0 +1,31 @@
+name: pisite3
+channels: !!python/tuple
+- !!python/unicode
+  'defaults'
+dependencies:
+- pip=9.0.1=py36_1
+- python=3.6.1=2
+- setuptools=27.2.0=py36_1
+- vs2015_runtime=14.0.25123=0
+- wheel=0.29.0=py36_0
+- pip:
+  - asn1crypto==0.22.0
+  - cffi==1.10.0
+  - click==6.7
+  - cryptography==1.9
+  - enum34==1.1.6
+  - flask==0.12.2
+  - flask-sqlalchemy==2.2
+  - flask-wtf==0.12
+  - idna==2.5
+  - ipaddress==1.0.18
+  - itsdangerous==0.24
+  - jinja2==2.8
+  - markupsafe==1.0
+  - mysqlclient==1.3.10
+  - pycparser==2.17
+  - pyopenssl==17.0.0
+  - six==1.10.0
+  - sqlalchemy==1.1.10
+  - werkzeug==0.12.2
+  - wtforms==2.1
