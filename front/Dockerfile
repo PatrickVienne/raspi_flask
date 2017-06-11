@@ -92,8 +92,6 @@ RUN set -ex \
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn
 
-RUN git clone https://github.com/angular/quickstart.git quickstart
-
 WORKDIR quickstart
 RUN npm install
 EXPOSE 3000 3001 8080
