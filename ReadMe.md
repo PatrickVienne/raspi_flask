@@ -26,3 +26,19 @@ nameserver 8.8.8.8
 ngrok:
 unzip ngrok
 ngrok/ngrok http 80
+
+
+Power Saving:
+
+Use this command to turn HDMI off:  /opt/vc/bin/tvservice -o
+
+And this command to turn it on:  /opt/vc/bin/tvservice -p
+
+Use this command to turn USB off entirely:
+echo 0x0 > /sys/devices/platform/soc/3f980000.usb/buspower
+
+and this to turn it on:
+echo 0x1 > /sys/devices/platform/soc/3f980000.usb/buspower
+
+So turn shut wifi down using ifdown wlan0
+and turn it on using ifup wlan
