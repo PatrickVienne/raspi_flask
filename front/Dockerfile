@@ -50,6 +50,8 @@ RUN set -ex \
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn
 
+COPY resource /srv/frontend
+WORKDIR /srv/frontend
 RUN npm install
 EXPOSE 3000 3001 8080
 CMD ["npm", "start"]
