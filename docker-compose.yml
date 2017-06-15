@@ -16,13 +16,14 @@ services:
      - ./web:/app
   front:
     restart: always
+    image: webservice_angular4
     build: ./front
     ports:
      - "3000:3000"
      - "3001:3001"
      - "8080:8080"
     volumes:
-     - ./front:/tmp/cache
+     - ./front:/srv/frontend
   db:
     restart: always
     hostname: mysqlserver
