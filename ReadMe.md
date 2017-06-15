@@ -24,8 +24,22 @@ to avoid "host not found" for keyserver write this line in /etc/resolv.conf:
 nameserver 8.8.8.8
 
 ngrok:
+
 unzip ngrok
+
 ngrok/ngrok http 80
+
+Run ngrok in Background:
+
+ngrok/ngrok http 80 -log=stdout > ngrok.log &
+
+Check random ngrok address
+
+curl localhost:4040/api/tunnels
+parkingpage.namecheap.com
+
+
+
 
 
 Power Saving:
