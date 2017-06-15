@@ -1,27 +1,38 @@
-# hallo patrick, kannst du mir einen tip geben warum das folgende nicht funktioniert:
-# coding: utf8
+# -*- encoding: utf-8 -*-
+import random
 
-class Suspect(object):
-    def __init__(self, name, gender, ethnos, hair, eye, face):
-        self.name = name
-        self.gender = gender
-        self.ethnos = ethnos
-        self.hair = hair
-        self.eye = eye
-        self.face = face
-
-    def get_details(self):
-        return self.name + " " + self.gender + " " + self.ethnos + " " + self.hair + " " + self.eye + " " + self.face
+a=1
+b=10
+number = random.randint(1, 10)
+counter = 0
 
 if __name__ == '__main__':
+    print "Guess the Secret Number Game (between {} and {} You have 3 tries!)".format(a,b)
+    print "*" * 40
+    print
+    while counter < 3:
 
-    eva = Suspect(name='eva', gender='female', ethnos='white', hair='blonde', eye='blue', face='oval')
-    larisa = Suspect(name='larisa', gender='female', ethnos='white', hair='brown', eye='brown', face='oval')
-    matej = Suspect(name='matej', gender='male', ethnos='white', hair='black', eye='blue', face='oval')
-    miha = Suspect(name='miha', gender='female', ethnos='white', hair='brown', eye='green', face='square')
+        print "Current Try: {}".format(counter)
+        print "-" * 20
+        try:
+            variable = raw_input()
+            variable = float(variable)
+        except:
+            print "Error. Not a correct number. Try again"
+            continue
 
-    suspects = [eva, larisa, matej, miha]
+        if variable == number:
+            print "\n You did it. Congratulations!\n"
+            quit()
 
-    for person in suspects:
-        print person.get_details()
+        elif variable > number:
+            print "Your Guess is higher than the number\n"
+            counter += 1
 
+        else:
+            print "Your Guess is lower than the number\n"
+            counter += 1
+
+        # if too many tries, final loop:
+        if counter == 3:
+            print "You lost. Thank you for playing"
