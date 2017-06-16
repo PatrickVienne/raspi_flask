@@ -1,6 +1,7 @@
 import smtpd
 import asyncore
 
+
 class CustomSMTPServer(smtpd.SMTPServer):
     def process_message(self, peer, mailfrom, rcpttos, data):
         print 'Receiving message from:', peer

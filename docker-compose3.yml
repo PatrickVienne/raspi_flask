@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  email:
+    restart: always
+    build:
+      context: ./smtpserver
+      dockerfile: Dockerfile
+    image: webservice_emails
+    depends_on:
+      - db
+    ports:
+     - "25:25"
+    volumes:
+     - ./smtpserver:/emailapp
   web:
     restart: always
     build:
