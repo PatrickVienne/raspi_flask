@@ -59,7 +59,6 @@ def test_entry_db():
     db.session.commit()
 
     results = UsersPy.query.all()
-    print db.table
     json_results = []
     for result in results:
         d = {'username': result.username,
@@ -90,14 +89,9 @@ def hello_world():
 @app.route('/GITHUBHOOK', methods=['POST'])
 def on_push():
     template = jinja_env.get_template("index.html")
-    print "received github push"
-    print "*" * 20
-    print flask.request
-    print "*" * 20
-    print flask.request.__dict__
-    print "*" * 20
     params = {}
     logging.debug('{}'.format(flask.request.__dict__))
+    logging.debug('{}'.format(flask.request.get_json()))
     logging.info('Info githubhook')
     logging.warning('Warning githubhook')
     return template.render(params)
