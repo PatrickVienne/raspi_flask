@@ -71,11 +71,11 @@ def test_entry_db():
 @app.route('/testdb')
 def testdb():
     logging.info('Test Database query')
-    print "testubg Database Connection"
+    print "testing Database Connection"
     if db.session.query("1").from_statement("SELECT 1").all():
         return 'It works.'
     else:
-        return 'Something is broken.'
+        return 'Something izs broken.'
 
 
 @app.route('/')
