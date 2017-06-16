@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beaa6aac-91bc-439f-ba59-5defd6c99a66" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smtpserver/start_server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smtpserver/test_send_mail.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app.py" afterPath="$PROJECT_DIR$/web/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smtpserver/start_server.py" afterPath="$PROJECT_DIR$/smtpserver/start_server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smtpserver/test_send_mail.py" afterPath="$PROJECT_DIR$/smtpserver/test_send_mail.py" />
     </list>
     <ignored path="raspi_flask.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start_server.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="start_server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smtpserver/start_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -49,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_send_mail.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_send_mail.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/smtpserver/test_send_mail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -165,6 +163,7 @@
         <option value="$PROJECT_DIR$/web/app.py" />
         <option value="$PROJECT_DIR$/smtpserver/start.py" />
         <option value="$PROJECT_DIR$/smtpserver/test_send_mail.py" />
+        <option value="$PROJECT_DIR$/smtpserver/start_server.py" />
       </list>
     </option>
   </component>
@@ -253,7 +252,7 @@
       <recent name="D:\raspi_flask\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.start_server">
+  <component name="RunManager" selected="Python.test_send_mail">
     <configuration default="false" name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,6 +300,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="raspi_flask" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/smtpserver/start_server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_send_mail" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/smtpserver" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="raspi_flask" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/smtpserver/test_send_mail.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -439,16 +455,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.app" />
       <item index="1" class="java.lang.String" itemvalue="Python.test" />
       <item index="2" class="java.lang.String" itemvalue="Python.start_server" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test_send_mail" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.start_server" />
-        <item index="1" class="java.lang.String" itemvalue="Python.app" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.test_send_mail" />
+        <item index="1" class="java.lang.String" itemvalue="Python.start_server" />
+        <item index="2" class="java.lang.String" itemvalue="Python.app" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -869,22 +887,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smtpserver/test_send_mail.py">
+    <entry file="file://$PROJECT_DIR$/smtpserver/start_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smtpserver/start_server.py">
+    <entry file="file://$PROJECT_DIR$/smtpserver/test_send_mail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="272">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
