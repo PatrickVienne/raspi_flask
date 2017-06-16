@@ -37,6 +37,14 @@ db.init_app(app)
 db.create_all()
 
 
+@app.before_first_request
+def setup_logging():
+    if not app.debug:
+        # In production mode, add log handler to sys.stderr.
+        app.logger.addHandler(logging.StreamHandler())
+        app.logger.setLevel(logging.INFO)
+
+
 @app.route('/test_entry_db/')
 def test_entry_db():
     admin = UsersPy('user1', 'password1')
@@ -88,8 +96,8 @@ def on_push():
     print "*" * 20
     params={}
     logging.debug('{}'.format(flask.request.__dict__))
-    logging.info('Info')
-    logging.warning('Warning')
+    logging.info('Info githubhook')
+    logging.warning('Warning githubhook')
     return template.render(params)
 
 if __name__ == '__main__':
