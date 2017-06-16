@@ -88,8 +88,6 @@ def hello_world():
 
 @app.route('/GITHUBHOOK', methods=['POST'])
 def on_push():
-    template = jinja_env.get_template("index.html")
-    # git settings
     project_dir = os.path.dirname(os.getcwd())
     repo = git.Repo(project_dir)
     logging.debug('Identified Repo in: {}'.format(project_dir))
@@ -98,7 +96,6 @@ def on_push():
     logging.debug('Pulling from remote: {}'.format(repo.remotes.origin.url))
     origin.pull()
     logging.debug('Finished pulling: {}'.format(repo.remotes.origin.url))
-    #params = {}
     logging.debug('{}'.format(flask.request.__dict__))
     logging.debug('{}'.format(flask.request.get_json()))
     logging.debug('Remote Pushed: {}'.format(flask.request.get_json().get('url')))
