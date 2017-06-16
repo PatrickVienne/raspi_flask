@@ -5,7 +5,7 @@ import jinja2
 import json
 import logging
 
-logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', filename='example.log',level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', filename='example.log', level=logging.DEBUG)
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -61,7 +61,7 @@ def test_entry_db():
 
 @app.route('/testdb')
 def testdb():
-    #logging.info('Test Database query')
+    logging.info('Test Database query')
     print "testubg Database Connection"
     if db.session.query("1").from_statement("SELECT 1").all():
         return 'It works.'
@@ -71,12 +71,13 @@ def testdb():
 
 @app.route('/')
 def hello_world():
+    logging.info("received request")
     template = jinja_env.get_template("index.html")
     params={}
     return template.render(params)
 
 
-@app.route('/GITHUBHOOK')
+@app.route('/GITHUBHOOK', methods=['POST'])
 def on_push():
     template = jinja_env.get_template("index.html")
     print "received github push"
