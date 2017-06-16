@@ -3,6 +3,9 @@ import flask
 import os
 import jinja2
 import json
+import logging
+
+logging.basicConfig(filename='example.log',level=logging.DEBUG)
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -83,6 +86,9 @@ def on_push():
     print flask.request.__dict__
     print "*" * 20
     params={}
+    logging.debug('{}'.format(flask.request.__dict__))
+    logging.info('Info')
+    logging.warning('Warning')
     return template.render(params)
 
 if __name__ == '__main__':
