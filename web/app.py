@@ -92,8 +92,6 @@ def on_push():
     params = {}
     logging.debug('{}'.format(flask.request.__dict__))
     logging.debug('{}'.format(flask.request.get_json()))
-    logging.info('Info githubhook')
-    logging.warning('Warning githubhook')
     return template.render(params)
 
 
