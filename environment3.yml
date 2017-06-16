@@ -17,6 +17,8 @@ dependencies:
   - flask==0.12.2
   - flask-sqlalchemy==2.2
   - flask-wtf==0.12
+  - gitdb2==2.0.2
+  - gitpython==2.1.5
   - idna==2.5
   - ipaddress==1.0.18
   - itsdangerous==0.24
@@ -26,6 +28,7 @@ dependencies:
   - pycparser==2.17
   - pyopenssl==17.0.0
   - six==1.10.0
+  - smmap2==2.0.3
   - sqlalchemy==1.1.10
   - werkzeug==0.12.2
   - wtforms==2.1
