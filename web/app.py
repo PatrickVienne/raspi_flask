@@ -2,6 +2,7 @@ import flask_sqlalchemy
 import flask
 import os
 import jinja2
+import json
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -71,6 +72,19 @@ def hello_world():
     params={}
     return template.render(params)
 
+
+@app.route('/GITHUBHOOK')
+def on_push():
+    template = jinja_env.get_template("index.html")
+    print "received github push"
+    print "*"*20
+    print flask.request
+    print "*" * 20
+    print flask.request.__dict__
+    print "*" * 20
+    params={}
+    return template.render(params)
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=80)
+    app.run(debug=False, host='0.0.0.0', port=80)
 
