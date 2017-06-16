@@ -3,6 +3,7 @@ import flask
 import os
 import jinja2
 import json
+import git
 import logging
 
 logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', filename='example.log',
@@ -16,7 +17,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:my-secret-pw@192.168.0.88:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = flask_sqlalchemy.SQLAlchemy(app)
-
 
 class UsersPy(db.Model):
     __tablename__ = "userspy"
@@ -89,10 +89,21 @@ def hello_world():
 @app.route('/GITHUBHOOK', methods=['POST'])
 def on_push():
     template = jinja_env.get_template("index.html")
-    params = {}
+    # git settings
+    project_dir = os.path.dirname(os.getcwd())
+    repo = git.Repo(project_dir)
+    logging.debug('Identified Repo in: {}'.format(project_dir))
+    origin = repo.create_remote('origin', repo.remotes.origin.url)
+    logging.debug('Created repo origin with url: {}'.format(repo.remotes.origin.url))
+    logging.debug('Pulling from remote: {}'.format(repo.remotes.origin.url))
+    origin.pull()
+    logging.debug('Finished pulling: {}'.format(repo.remotes.origin.url))
+    #params = {}
     logging.debug('{}'.format(flask.request.__dict__))
     logging.debug('{}'.format(flask.request.get_json()))
-    return template.render(params)
+    logging.debug('Remote Pushed: {}'.format(flask.request.get_json().get('url')))
+    logging.debug('Remote Branch Pushed: {}'.format(flask.request.get_json().get('master_branch')))
+    return flask.make_response()
 
 
 if __name__ == '__main__':
