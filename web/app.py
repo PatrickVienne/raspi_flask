@@ -50,5 +50,5 @@ def on_push():
 
 
 if __name__ == '__main__':
-    context = ('cert.crt', 'key.key')
+    context = ('domain.crt', 'domain.key')
     app.run(debug=False, host='0.0.0.0', port=80, threaded=True, ssl_context=context)
