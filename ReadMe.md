@@ -56,3 +56,9 @@ echo 0x1 > /sys/devices/platform/soc/3f980000.usb/buspower
 
 So turn shut wifi down using ifdown wlan0
 and turn it on using ifup wlan
+
+
+
+
+Create SSL certificate and key:
+https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
