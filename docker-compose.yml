@@ -8,7 +8,8 @@ services:
       dockerfile: Dockerfile
     image: webservice_emails
     depends_on:
-      - db
+      - mysqldb
+      - mongodb
     ports:
      - "25:25"
     volumes:
@@ -20,10 +21,11 @@ services:
       dockerfile: Dockerfile
     image: webservice_flask
     depends_on:
-      - db
+      - mysqldb
+      - mongodb
     ports:
      - "80:80"
-     - "443:80"
+     - "443:443"
     volumes:
      - ./web:/app
   front:
@@ -36,7 +38,7 @@ services:
      - "8080:8080"
     volumes:
      - ./front:/tmp/cache
-  db:
+  mysqldb:
     restart: always
     hostname: mysqlserver
     image: hypriot/rpi-mysql
@@ -48,6 +50,22 @@ services:
       MYSQL_USER: test_user
       MYSQL_PASS: test_password
     volumes:
-      - my-datavolume:/var/lib/mysql
+      - mysqldata:/var/lib/mysql
+  mongodb:
+    restart: always
+    hostname: mongoserver
+    build:
+      context: ./mongodb
+      dockerfile: Dockerfile
+    image: rpi-mongo:3.4.5
+    ports:
+     - "27017:27017"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - mongodata:/data/db
+    command: mongod --smallfiles --logpath=/dev/nul
 volumes:
-  my-datavolume:
+  mysqldata:
+  mongodata:
