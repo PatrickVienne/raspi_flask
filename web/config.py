@@ -18,21 +18,13 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = 'mysql://{}:{}@{}:{}/{}'.format(DB_USER,DB_PW,DB_HOST,DB_PORT,DB_NAME)#
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
-
-    # Mongo support
-    MONGO_HOST = "192.168.0.88"
-    MONGO_PORT = 27017
-    MONGO_NAME = "mongo_test_db"
-    SQLALCHEMY_DATABASE_URI = 'mysql://{}:{}/{}'.format(DB_HOST,DB_PORT,DB_NAME)#
-    SQLALCHEMY_TRACK_MODIFICATIONS = True
-
     # Configured for Gmail
     DEFAULT_MAIL_SENDER = 'Admin < codingbuddytest@gmail.com >'
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 465
     MAIL_USE_SSL = True
-    MAIL_USERNAME = 'codingbuddytest@gmail.com'
-    MAIL_PASSWORD = 'test010203'
+    MAIL_USERNAME = '---@gmail.com'
+    MAIL_PASSWORD = '---'
 
     # Flask-Security setup
     SECURITY_EMAIL_SENDER = 'Security < security@example.com >'
