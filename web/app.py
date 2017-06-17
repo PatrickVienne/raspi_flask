@@ -5,12 +5,6 @@ import jinja2
 import json
 import git
 import logging
-from OpenSSL import SSL
-
-context = SSL.Context(SSL.SSLv23_METHOD)
-context.use_privatekey_file('domain.key')
-context.use_certificate_file('domain.crt')
-
 
 logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', filename='example.log',
                     level=logging.DEBUG)
@@ -56,4 +50,5 @@ def on_push():
 
 
 if __name__ == '__main__':
+    context = ('cert.crt', 'key.key')
     app.run(debug=False, host='0.0.0.0', port=80, threaded=True, ssl_context=context)
