@@ -9,7 +9,6 @@ services:
     image: webservice_emails
     depends_on:
       - mysqldb
-      - mongodb
     ports:
      - "25:25"
     volumes:
@@ -22,7 +21,6 @@ services:
     image: webservice_flask
     depends_on:
       - mysqldb
-      - mongodb
     ports:
      - "80:80"
      - "443:443"
