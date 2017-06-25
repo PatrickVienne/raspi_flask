@@ -8,7 +8,7 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), aut
 
 
 app = flask.Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:my-secret-pw@192.168.0.88:3306/test_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:my-secret-pw@mysqldb:3306/test_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = flask_sqlalchemy.SQLAlchemy(app)

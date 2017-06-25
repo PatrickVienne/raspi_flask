@@ -13,7 +13,7 @@ template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
 
 app = flask.Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:my-secret-pw@192.168.0.88:3306/test_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:my-secret-pw@mysqldb:3306/test_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = flask_sqlalchemy.SQLAlchemy(app)
@@ -106,5 +106,4 @@ def on_push():
 
 
 if __name__ == '__main__':
-    context = ('domain.crt', 'domain.key')
-    app.run(debug=False, host='0.0.0.0', port=80, threaded=True, ssl_context=context)
+    app.run(debug=False, host='0.0.0.0', port=80, threaded=True)
