@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
   email:
@@ -24,8 +24,11 @@ services:
     ports:
      - "80:80"
      - "443:443"
+    volumes:
+     - ./web:/app
   front:
     restart: always
+    image: webservice_angular4
     build: ./front
     ports:
      - "3000:3000"
