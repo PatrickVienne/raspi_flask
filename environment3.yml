@@ -10,6 +10,8 @@ dependencies:
 - wheel=0.29.0=py36_0
 - pip:
   - asn1crypto==0.22.0
+  - beautifulsoup4==4.6.0
+  - certifi==2017.4.17
   - cffi==1.10.0
   - click==6.7
   - cryptography==1.9
@@ -24,11 +26,14 @@ dependencies:
   - itsdangerous==0.24
   - jinja2==2.8
   - markupsafe==1.0
+  - mysql-connector-python-rf==2.2.2
   - mysqlclient==1.3.10
   - pycparser==2.17
   - pyopenssl==17.0.0
+  - requests==2.17.3
   - six==1.10.0
   - smmap2==2.0.3
   - sqlalchemy==1.1.10
+  - urllib3==1.21.1
   - werkzeug==0.12.2
   - wtforms==2.1

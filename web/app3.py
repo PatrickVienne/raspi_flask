@@ -8,7 +8,7 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), aut
 
 
 app = flask.Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:my-secret-pw@mysqldb:3306/test_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:my-secret-pw@mysqldb:3306/test_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = flask_sqlalchemy.SQLAlchemy(app)
@@ -68,9 +68,8 @@ def testdb():
 @app.route('/')
 def hello_world():
     template = jinja_env.get_template("index.html")
-    params={}
+    params = {}
     return template.render(params)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=80)
-
+    app.run(debug=False, host='0.0.0.0', port=80, threaded=True)

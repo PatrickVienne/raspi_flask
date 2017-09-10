@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   email:
@@ -48,6 +48,6 @@ services:
       MYSQL_USER: test_user
       MYSQL_PASS: test_password
     volumes:
-      - mysqldata3:/var/lib/mysql
+      - mysqldata:/var/lib/mysql
 volumes:
-  mysqldata3:
+  mysqldata:
