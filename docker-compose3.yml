@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   email:
@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     image: webservice_emails
     depends_on:
-      - db
+      - mysqldb
     ports:
      - "25:25"
     volumes:
@@ -20,7 +20,7 @@ services:
       dockerfile: Dockerfile3
     image: webservice_flask3
     depends_on:
-      - db
+      - mysqldb
     ports:
      - "80:80"
      - "443:443"
@@ -33,7 +33,7 @@ services:
      - "8080:8080"
     volumes:
      - ./front:/tmp/cache
-  db:
+  mysqldb:
     restart: always
     hostname: mysqlserver
     image: hypriot/rpi-mysql
@@ -45,6 +45,6 @@ services:
       MYSQL_USER: test_user
       MYSQL_PASS: test_password
     volumes:
-      - my-datavolume:/var/lib/mysql
+      - mysqldata3:/var/lib/mysql
 volumes:
-  my-datavolume:
+  mysqldata3:

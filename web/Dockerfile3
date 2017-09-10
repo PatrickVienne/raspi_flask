@@ -3,10 +3,10 @@ RUN apt-get update -y
 RUN apt-get install -y python-pip python-dev build-essential libffi-dev libssl-dev python3 python3-pip python3-dev git
 RUN pip install -U pip
 RUN apt-get install libmysqlclient-dev
-COPY . /app
+COPY * /app/
 WORKDIR /app
 RUN pip3 install -r requirements3.txt
-EXPOSE 80 430
+EXPOSE 80
 ENTRYPOINT ["python3"]
 CMD ["app3.py"]
 
